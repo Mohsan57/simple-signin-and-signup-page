@@ -1,0 +1,49 @@
+{% extends "html/baseform.html" %}
+{%load static%}
+{% block title %}
+Login
+{% endblock title %}
+{% block formtitle1 %}
+Login
+{% endblock formtitle1 %}
+
+{% block formtitle2 %}
+Login
+{% endblock formtitle2 %}
+{% block account-exist %}
+Don't have a Account
+{% endblock account-exist %}
+{% block url-of-2nd-page %}
+<a href="{% url 'singup' %}" class="btn btn-white btn-outline-white">Sing Up</a>
+{% endblock url-of-2nd-page %}
+{% block singin-singup1 %}
+Sing In
+{% endblock singin-singup1 %}
+
+{% block singin-singup2 %}
+Sing In
+{% endblock singin-singup2 %}
+{% block _form %}
+<form class="signin-form" method="POST">
+    {% csrf_token %}
+    <div class="form-group mb-3">
+        <div class="label">
+            {{form.as_p}}
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="form-control btn btn-primary submit px-3">
+            Sing In
+        </button>
+    </div>
+
+</form>
+{% endblock _form %}
+{% block Account-validation %}
+{% if try %}
+
+<p>Invaild user name or password</p>
+{% endif %}
+{% endblock Account-validation %}

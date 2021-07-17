@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+
+        {% endblock title %}</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="{% static 'css/baseform.css'%}">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">{% block formtitle1 %}
+
+                        {% endblock formtitle1 %}</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="wrap d-md-flex">
+                        <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+                            <div class="text w-100">
+                                <h2>Welcome to {% block formtitle2 %}
+
+                                    {% endblock formtitle2 %}</h2>
+                                <p>{% block account-exist %}
+
+                                    {% endblock account-exist %}</p>
+                                {% block url-of-2nd-page %}
+
+                                {% endblock url-of-2nd-page %}
+                            </div>
+                        </div>
+                        <div class="login-wrap p-4 p-lg-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">{% block singin-singup1 %}
+
+                                        {% endblock singin-singup1 %}</h3>
+                                </div>
+                            </div>
+
+                            {% block _form %}
+
+                            {% endblock _form %}
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-md-right">
+                                    {% block Account-validation %}
+
+                                    {% endblock Account-validation %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

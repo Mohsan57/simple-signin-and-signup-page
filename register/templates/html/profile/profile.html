@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{%static 'css/profile/style.css'%}">
+    <script type="text/javascript" src="{% static 'js/poper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    {% if found %}
+    <div class="container bootstrap snippets bootdey">
+        <div class="panel-body inf-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip"
+                        src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
+                </div>
+                <div class="col-md-6">
+                    <strong>Information</strong><br>
+                    <div class="table-responsive">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Identificacion
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        N/A
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            First Name
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        {{user_detail.first_name}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Last Name
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        {{user_detail.last_name}}
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Username
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        {{user_detail.user_name}}
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Role
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        N/A
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Email
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        {{user_detail.email}}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            created
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        N/A
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            <span class="glyphicon text-primary"></span>
+                                            Modified
+                                        </strong>
+                                    </td>
+                                    <td class="text-primary">
+                                        N/A
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%else%}
+    <strong>
+        <span class="glyphicon text-primary"></span>
+        <h1>Error 404</h1>
+    </strong>
+    {% endif %}
+
+</body>
+
+</html>

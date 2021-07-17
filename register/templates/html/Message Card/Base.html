@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/Message Card/Style.css'%}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+
+        {% endblock title %}</title>
+</head>
+
+<body {% block color %} {% endblock color %}>
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="Scriptcontent">
+
+                    <!-- partial:index.partial.html -->
+                    <div id="card" class="animated fadeIn">
+                        <div {% block upper-side-color %} {% endblock upper-side-color %} id="upper-side">
+                            <h3 id="status">
+                                {% block Status %}
+                                {% endblock Status %}
+                            </h3>
+                        </div>
+                        <div id="lower-side">
+                            <p id="message">
+                                {% block Message %}
+
+                                {% endblock Message %}
+                            </p>
+                            {% block button %}
+
+                            {% endblock button %}
+                        </div>
+                    </div>
+                    <!-- partial -->
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

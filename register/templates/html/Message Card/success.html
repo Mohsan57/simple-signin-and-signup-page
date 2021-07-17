@@ -1,0 +1,22 @@
+{% extends "html/Message Card/Base.html" %}
+{% block title %}
+Success
+{% endblock title %}
+{% block color %}
+style=" background: #439967b9; "
+{% endblock color %}
+{% block upper-side-color %}
+style="background-color: #8BC34A;"
+{% endblock upper-side-color %}
+{% block checkmark %}
+
+{% endblock checkmark %}
+{% block Status %}
+Success
+{% endblock Status %}
+{% block Message %}
+Congratulations, your account has been successfully created.
+{% endblock Message %}
+{% block button %}
+<a href="{% url 'singin' %}" id="contBtn">Login</a>
+{% endblock button %}

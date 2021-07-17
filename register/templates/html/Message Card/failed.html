@@ -1,0 +1,22 @@
+{% extends "html/Message Card/Base.html" %}
+{% block title %}
+Failed
+{% endblock title %}
+{% block color %}
+style=" background: #FF5B66; "
+{% endblock color %}
+{% block upper-side-color %}
+style="background-color: #E82331;"
+{% endblock upper-side-color %}
+{% block checkmark %}
+
+{% endblock checkmark %}
+{% block Status %}
+Failed
+{% endblock Status %}
+{% block Message %}
+Failed to create Account
+{% endblock Message %}
+{% block button %}
+<a href="{% url 'singup' %}" id="contBtn" style="background-color: rgba(255, 51, 0, 0.822)">Sing up Again</a>
+{% endblock button %}
