@@ -1,2 +1,2 @@
 # First-django-project
-My First Django Project.
+This is simple signup and singin page with Django(Python)
