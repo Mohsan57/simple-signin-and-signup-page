@@ -1,2 +1,2 @@
 # First-django-project
-This is simple signup and singin page with Django(Python)
+This is simple signup and singin page with Django(Python) without user Authentication
